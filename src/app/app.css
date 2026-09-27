@@ -1,0 +1,899 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600&family=Playfair+Display:ital,wght@0,400;0,500;1,400&display=swap');
+
+/* =========================================================
+   LOCAL FONTS
+   ========================================================= */
+
+@font-face {
+  font-family: "Spinner Rack BB";
+  src: url("/fonts/spinner-rack-bb.otf") format("opentype");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Yuji Boku";
+  src: url("/fonts/YujiBoku-Regular.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* =========================================================
+   GLOBAL
+   ========================================================= */
+
+:host {
+  display: block;
+  min-height: 100vh;
+  background: #9E1C32;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  background: #9E1C32;
+  color: #ffffff;
+  font-family: "DM Sans", sans-serif;
+}
+
+button,
+input,
+select,
+textarea {
+  font-family: inherit;
+}
+
+/* =========================================================
+   MAIN
+   ========================================================= */
+
+.wedding-site {
+  width: 100%;
+  overflow-x: hidden;
+  background: #9E1C32;
+}
+
+.invitation {
+  width: 100%;
+}
+
+/* =========================================================
+   HERO
+   ========================================================= */
+
+.hero {
+  min-height: 100vh;
+  padding: 60px 24px 90px;
+
+  background: #9E1C32;
+  color: #ffffff;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  text-align: center;
+}
+
+.ornament {
+  font-family: "Spinner Rack BB", cursive;
+  font-size: 2rem;
+  line-height: 1;
+  color: #ffffff;
+  margin: 15px 0;
+}
+
+.top-ornament {
+  margin-bottom: 35px;
+}
+
+.hand-title {
+  font-family: "Yuji Boku", serif;
+  font-size: clamp(2.4rem, 7vw, 4.8rem);
+  line-height: 0.95;
+  font-weight: 400;
+  letter-spacing: 0.01em;
+
+  margin: 0 0 25px;
+
+  color: #ffffff;
+}
+
+.hands-drawing {
+  font-family: "Spinner Rack BB", cursive;
+  font-size: 3rem;
+  line-height: 1;
+  margin: 5px 0 20px;
+}
+
+.couple-names {
+  font-family: "Yuji Boku", serif;
+  font-size: clamp(2.2rem, 5vw, 4rem);
+  line-height: 1.1;
+  font-weight: 400;
+
+  margin: 0 0 15px;
+
+  color: #ffffff;
+}
+
+.date-script {
+  font-family: "Yuji Boku", serif;
+  font-size: clamp(1.2rem, 3vw, 1.7rem);
+  line-height: 1.3;
+
+  margin: 0 0 25px;
+
+  color: #ffffff;
+}
+
+.intro-copy {
+  width: min(520px, 100%);
+
+  margin: 35px auto 20px;
+
+  font-family: "DM Sans", sans-serif;
+  font-size: 0.95rem;
+  line-height: 1.8;
+
+  color: rgba(255, 255, 255, 0.9);
+}
+
+.couple-illustration {
+  font-family: "Spinner Rack BB", cursive;
+  font-size: 3rem;
+  line-height: 1;
+  margin: 20px 0;
+}
+
+.script-name {
+  font-family: "Yuji Boku", serif;
+  font-size: clamp(2rem, 4vw, 3.2rem);
+  line-height: 1.2;
+  font-weight: 400;
+
+  margin: 10px 0;
+
+  color: #ffffff;
+}
+
+/* =========================================================
+   BUTTON
+   ========================================================= */
+
+.red-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 13px 28px;
+
+  background: #ffffff;
+  color: #9E1C32;
+
+  border: 1px solid #ffffff;
+  border-radius: 2px;
+
+  font-family: "DM Sans", sans-serif;
+  font-size: 0.8rem;
+  font-weight: 600;
+
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+
+  text-decoration: none;
+  cursor: pointer;
+
+  transition:
+    background 0.25s ease,
+    color 0.25s ease,
+    transform 0.25s ease;
+}
+
+.red-button:hover {
+  background: #dbe7f5;
+  color: #9E1C32;
+  transform: translateY(-2px);
+}
+
+.small-button {
+  margin-top: 20px;
+  padding: 11px 22px;
+}
+
+/* =========================================================
+   SECTION HEADINGS
+   ========================================================= */
+
+.script-heading {
+  font-family: "Yuji Boku", serif;
+
+  font-size: clamp(2.1rem, 5vw, 3.5rem);
+  line-height: 1.15;
+  font-weight: 400;
+
+  text-align: center;
+
+  margin: 0 0 35px;
+
+  color: #ffffff;
+}
+
+/* =========================================================
+   COUNTDOWN
+   ========================================================= */
+
+.countdown-section {
+  width: min(700px, 100%);
+  margin: 70px auto 0;
+}
+
+.countdown {
+  width: 100%;
+
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+
+  gap: 15px;
+
+  margin: 0 auto;
+}
+
+.countdown > div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  text-align: center;
+}
+
+.countdown strong {
+  display: block;
+
+  font-family: "Playfair Display", serif;
+  font-size: clamp(1.8rem, 5vw, 3rem);
+  line-height: 1;
+  font-weight: 400;
+
+  color: #ffffff;
+}
+
+.countdown span {
+  display: block;
+
+  margin-top: 9px;
+
+  font-family: "DM Sans", sans-serif;
+  font-size: 0.65rem;
+  font-weight: 500;
+
+  letter-spacing: 0.16em;
+
+  color: #ffffff;
+}
+
+/* =========================================================
+   SAVE THE DATE
+   ========================================================= */
+
+.save-date {
+  width: min(600px, 100%);
+  margin: 90px auto 0;
+
+  text-align: center;
+}
+
+.save-date .spaced {
+  margin: 0;
+
+  font-family: "DM Sans", sans-serif;
+  font-size: 0.75rem;
+  font-weight: 500;
+
+  letter-spacing: 0.18em;
+
+  color: #ffffff;
+}
+
+.calendar {
+  width: min(300px, 100%);
+
+  margin: 30px auto;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 22px;
+}
+
+.calendar span,
+.calendar strong {
+  font-family: "Playfair Display", serif;
+  font-size: 1.1rem;
+  font-weight: 400;
+  color: #ffffff;
+}
+
+.calendar strong {
+  width: 50px;
+  height: 50px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border: 1px solid #ffffff;
+  border-radius: 50%;
+
+  font-size: 1.3rem;
+}
+
+.save-date .time {
+  margin: 0;
+
+  font-family: "DM Sans", sans-serif;
+  font-size: 0.75rem;
+  letter-spacing: 0.15em;
+
+  color: #ffffff;
+}
+
+/* =========================================================
+   LOCATION
+   ========================================================= */
+
+.location-mini {
+  width: min(600px, 100%);
+  margin: 90px auto 0;
+
+  text-align: center;
+}
+
+.venue-drawing {
+  font-family: "Spinner Rack BB", cursive;
+  font-size: 3rem;
+  line-height: 1;
+
+  margin: 10px 0 15px;
+}
+
+.location-mini h3 {
+  font-family: "Playfair Display", serif;
+  font-size: 1.6rem;
+  font-weight: 400;
+
+  margin: 0 0 10px;
+
+  color: #ffffff;
+}
+
+.location-mini p {
+  margin: 0;
+
+  font-family: "DM Sans", sans-serif;
+  font-size: 0.9rem;
+  line-height: 1.7;
+
+  color: #ffffff;
+}
+
+/* =========================================================
+   TIMELINE
+   ========================================================= */
+
+.timeline-section {
+  width: min(800px, 100%);
+  margin: 90px auto 0;
+
+  text-align: center;
+}
+
+.timeline-section .ornament {
+  margin-bottom: 25px;
+}
+
+.timeline {
+  width: 100%;
+  margin: 0 auto;
+
+  text-align: left;
+}
+
+.timeline-event {
+  display: grid;
+  grid-template-columns: 55px 1fr;
+  align-items: center;
+
+  gap: 20px;
+
+  padding: 20px 0;
+
+  border-bottom: 1px solid rgba(255, 255, 255, 0.35);
+}
+
+.timeline-event:last-child {
+  border-bottom: none;
+}
+
+.event-icon {
+  font-family: "Spinner Rack BB", cursive;
+  font-size: 1.8rem;
+
+  text-align: center;
+
+  color: #ffffff;
+}
+
+.timeline-event span {
+  display: block;
+
+  margin-bottom: 5px;
+
+  font-family: "DM Sans", sans-serif;
+  font-size: 0.7rem;
+  font-weight: 500;
+
+  letter-spacing: 0.12em;
+
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.timeline-event strong {
+  display: block;
+
+  font-family: "Playfair Display", serif;
+  font-size: 1.2rem;
+  font-weight: 400;
+
+  color: #ffffff;
+}
+
+/* =========================================================
+   SECOND PAGE
+   ========================================================= */
+
+.second-page {
+  padding: 90px 24px 100px;
+
+  background: #9E1C32;
+  color: #ffffff;
+}
+
+/* =========================================================
+   WEDDING DETAILS
+   ========================================================= */
+
+.details-section {
+  width: min(900px, 100%);
+  margin: 0 auto;
+
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+
+  column-gap: 60px;
+  row-gap: 50px;
+
+  text-align: center;
+}
+
+.details-section .script-heading {
+  grid-column: 1 / -1;
+  margin-bottom: 0;
+}
+
+.detail-block {
+  text-align: center;
+}
+
+.detail-block h3 {
+  font-family: "Yuji Boku", serif;
+  font-size: 2rem;
+  line-height: 1.2;
+  font-weight: 400;
+
+  margin: 0 0 15px;
+
+  color: #ffffff;
+}
+
+.detail-block p {
+  margin: 0;
+
+  font-family: "DM Sans", sans-serif;
+  font-size: 0.9rem;
+  line-height: 1.8;
+
+  color: rgba(255, 255, 255, 0.9);
+}
+
+/* =========================================================
+   GIFT
+   ========================================================= */
+
+.gift-section {
+  width: min(650px, 100%);
+  margin: 100px auto 0;
+
+  text-align: center;
+}
+
+.gift-box {
+  max-width: 550px;
+  margin: 0 auto;
+}
+
+.gift-bow {
+  font-family: "Spinner Rack BB", cursive;
+  font-size: 3rem;
+
+  margin-bottom: 20px;
+}
+
+.gift-box p {
+  margin: 0 auto 18px;
+
+  font-family: "DM Sans", sans-serif;
+  font-size: 0.95rem;
+  line-height: 1.8;
+
+  color: rgba(255, 255, 255, 0.9);
+}
+
+/* =========================================================
+   DRESS CODE
+   ========================================================= */
+
+.dress-section {
+  width: min(650px, 100%);
+  margin: 100px auto 0;
+
+  text-align: center;
+}
+
+.dress-drawing {
+  font-family: "Spinner Rack BB", cursive;
+  font-size: 3rem;
+
+  margin: 10px 0 20px;
+}
+
+.dress-section > p {
+  margin: 0;
+
+  font-family: "DM Sans", sans-serif;
+  font-size: 0.95rem;
+  line-height: 1.8;
+
+  color: rgba(255, 255, 255, 0.9);
+}
+
+/* =========================================================
+   LOVE STORY
+   ========================================================= */
+
+.story-section {
+  width: min(900px, 100%);
+  margin: 100px auto 0;
+
+  text-align: center;
+}
+
+.story {
+  width: 100%;
+  margin-top: 50px;
+}
+
+.story-photo {
+  width: min(500px, 100%);
+  margin: 0 auto 25px;
+}
+
+.story-photo img {
+  display: block;
+
+  width: 100%;
+  height: auto;
+
+  aspect-ratio: 4 / 5;
+  object-fit: cover;
+}
+
+.story-text {
+  width: min(600px, 100%);
+  margin: 0 auto 55px;
+
+  text-align: center;
+}
+
+.story-text span {
+  display: block;
+
+  font-family: "Yuji Boku", serif;
+  font-size: 1.8rem;
+
+  margin-bottom: 12px;
+
+  color: #ffffff;
+}
+
+.story-text p {
+  margin: 0;
+
+  font-family: "DM Sans", sans-serif;
+  font-size: 0.95rem;
+  line-height: 1.8;
+
+  color: rgba(255, 255, 255, 0.9);
+}
+
+/* =========================================================
+   RSVP
+   ========================================================= */
+
+.rsvp-section {
+  width: min(650px, 100%);
+  margin: 100px auto 0;
+
+  text-align: center;
+}
+
+.rsvp-heading {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+
+  margin-bottom: 20px;
+}
+
+.rsvp-heading span {
+  font-family: "Yuji Boku", serif;
+  font-size: clamp(3rem, 8vw, 5rem);
+  line-height: 1;
+  color: #ffffff;
+}
+
+.rsvp-section > p {
+  width: min(550px, 100%);
+  margin: 0 auto 35px;
+
+  font-family: "DM Sans", sans-serif;
+  font-size: 0.9rem;
+  line-height: 1.8;
+
+  color: rgba(255, 255, 255, 0.9);
+}
+
+.rsvp-section form {
+  display: flex;
+  flex-direction: column;
+
+  gap: 10px;
+
+  text-align: left;
+}
+
+.rsvp-section label {
+  margin-top: 8px;
+
+  font-family: "DM Sans", sans-serif;
+  font-size: 0.75rem;
+  font-weight: 500;
+
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+
+  color: #ffffff;
+}
+
+.rsvp-section input,
+.rsvp-section select,
+.rsvp-section textarea {
+  width: 100%;
+
+  padding: 13px 15px;
+
+  background: rgba(255, 255, 255, 0.08);
+  color: #ffffff;
+
+  border: 1px solid rgba(255, 255, 255, 0.55);
+  border-radius: 0;
+
+  outline: none;
+
+  font-family: "DM Sans", sans-serif;
+  font-size: 0.9rem;
+}
+
+.rsvp-section input::placeholder,
+.rsvp-section textarea::placeholder {
+  color: rgba(255, 255, 255, 0.65);
+}
+
+.rsvp-section input:focus,
+.rsvp-section select:focus,
+.rsvp-section textarea:focus {
+  border-color: #ffffff;
+  background: rgba(255, 255, 255, 0.12);
+}
+
+.rsvp-section select option {
+  color: #111111;
+  background: #ffffff;
+}
+
+.rsvp-section textarea {
+  min-height: 120px;
+  resize: vertical;
+}
+
+.submit-button {
+  align-self: center;
+  margin-top: 15px;
+}
+
+/* =========================================================
+   SUCCESS MESSAGE
+   ========================================================= */
+
+.success-message {
+  padding: 40px 20px 0;
+
+  text-align: center;
+}
+
+.success-message > span {
+  font-family: "Spinner Rack BB", cursive;
+  font-size: 2.5rem;
+}
+
+.success-message p {
+  font-family: "Yuji Boku", serif;
+  font-size: 2rem;
+
+  margin: 10px 0;
+
+  color: #ffffff;
+}
+
+.success-message small {
+  font-family: "DM Sans", sans-serif;
+  font-size: 0.85rem;
+
+  color: rgba(255, 255, 255, 0.85);
+}
+
+/* =========================================================
+   CLOSING
+   ========================================================= */
+
+.closing {
+  padding: 100px 20px 40px;
+
+  text-align: center;
+}
+
+.stamp {
+  width: 110px;
+  height: 110px;
+
+  margin: 0 auto 45px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border: 1px solid #ffffff;
+  border-radius: 50%;
+
+  font-family: "Yuji Boku", serif;
+  font-size: 0.9rem;
+  line-height: 1.35;
+
+  text-align: center;
+
+  color: #ffffff;
+
+  transform: rotate(-8deg);
+}
+
+.closing .script-name {
+  margin-bottom: 15px;
+}
+
+.closing > p {
+  margin: 0;
+
+  font-family: "DM Sans", sans-serif;
+  font-size: 0.8rem;
+  letter-spacing: 0.15em;
+
+  color: #ffffff;
+}
+
+.closing .ornament {
+  margin: 30px 0 20px;
+}
+
+.closing .with-love {
+  font-size: 0.7rem;
+  letter-spacing: 0.25em;
+}
+
+/* =========================================================
+   RESPONSIVE
+   ========================================================= */
+
+@media (max-width: 700px) {
+
+  .hero {
+    padding: 45px 20px 70px;
+  }
+
+  .second-page {
+    padding: 70px 20px 80px;
+  }
+
+  .details-section {
+    grid-template-columns: 1fr;
+    gap: 45px;
+  }
+
+  .details-section .script-heading {
+    grid-column: auto;
+  }
+
+  .timeline-event {
+    grid-template-columns: 45px 1fr;
+    gap: 15px;
+  }
+
+  .story-photo {
+    width: 100%;
+  }
+}
+
+@media (max-width: 450px) {
+
+  .hand-title {
+    font-size: 2.5rem;
+  }
+
+  .couple-names {
+    font-size: 2.3rem;
+  }
+
+  .countdown {
+    gap: 5px;
+  }
+
+  .countdown strong {
+    font-size: 1.7rem;
+  }
+
+  .countdown span {
+    font-size: 0.58rem;
+    letter-spacing: 0.1em;
+  }
+
+  .calendar {
+    gap: 14px;
+  }
+
+  .timeline-event {
+    grid-template-columns: 40px 1fr;
+  }
+
+  .event-icon {
+    font-size: 1.5rem;
+  }
+}
