@@ -846,6 +846,36 @@ textarea {
 }
 
 /* =========================================================
+   QUESTIONNAIRE
+   ========================================================= */
+
+.questionnaire-section {
+  width: min(760px, calc(100% - 32px));
+  margin: 70px auto 0;
+  text-align: center;
+}
+
+.questionnaire-box {
+  padding: 30px 24px;
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.45);
+}
+
+.questionnaire-label {
+  margin: 0 0 22px;
+  font-family: "DM Sans", sans-serif;
+  font-size: 1rem;
+  line-height: 1.7;
+  font-weight: 500;
+  letter-spacing: 0.04em;
+  color: rgba(255, 255, 255, 0.95);
+}
+
+.questionnaire-button {
+  margin-top: 0;
+}
+
+/* =========================================================
    LOVE STORY
    ========================================================= */
 
